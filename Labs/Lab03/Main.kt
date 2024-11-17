@@ -8,7 +8,7 @@ data class Person(
     val name: String,
     val age: Int,
     val isMale: Boolean,
-    val test: List<Cocojambo>,
+    val test: List<Any>,
     val fuf: FUBAR
 )
 data class FUBAR(
@@ -28,7 +28,7 @@ fun main() {
 
     val obj3 = Cocojambo(11, "12")
     val obj2 = FUBAR(false, 228, "o_O", obj3)
-    val obj = Person("Ivan", 17, true, listOf(obj3, obj3), obj2)
+    val obj = Person("Ivan", 17, true, listOf(1, "fooooo", "12332", 1337), obj2)
     val threadPool = Executors.newFixedThreadPool(4)
     val mapper = jacksonObjectMapper()
 
